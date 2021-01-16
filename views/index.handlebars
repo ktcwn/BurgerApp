@@ -5,7 +5,7 @@
 <ul>
     {{#each burgers}}
     {{#unless devour}}
-    {{> burger/burger-block devour=true}}
+    {{> burgers/burger-block devour=true}}
     {{/unless}}
     {{/each}}
 </ul>
@@ -24,7 +24,7 @@
 
     <div class="form-group">
         <label for="ca">Enter Burger Order Here</label>
-        <input type="text" id="ca" name="name">
+        <input type="text-area" id="ca" name="name">
     </div>
 
     <button type="submit">Submit</button>

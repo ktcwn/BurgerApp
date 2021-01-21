@@ -1,20 +1,21 @@
 <h1>EAT DA BURGER!
     <img src="Homework/BurgerApp/views/burger.png" alt="">
 </h1>
-
+<h2>Burgers that are not devoured</h2>
 <ul>
     {{#each burgers}}
-    {{#unless sleepy}}
+    {{#unless devour}}
     {{> burgers/burger-block devour=true}}
     {{/unless}}
     {{/each}}
 </ul>
 
-<h2>Cats that are sleepy!</h2>
+<h2>Burgers that are devoured!</h2>
+
 
 <ul>
     {{#each burgers}}
-    {{#if sleepy}}
+    {{#if devoured}}
     {{> burgers/burger-block devour=false}}
     {{/if}}
     {{/each}}
@@ -29,9 +30,9 @@
     </div>
 
     <div class="form-group">
-        <label for="sleepy">Sleepy?</label><br>
-        <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-        <input type="radio" name="sleepy" value="0"> Awake
+        <label for="devoured">Devoured?</label><br>
+        <input type="radio" name="devoured" value="1" checked> Sleepy!<br>
+        <input type="radio" name="devoured" value="0"> Awake
     </div>
 
     <button type="submit">Add Burger</button>
